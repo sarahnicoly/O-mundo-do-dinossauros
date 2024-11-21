@@ -14,9 +14,7 @@
 </cabeçalho>
 
 <!-- Faixa -->
-<seção class="banner">
 <img src="https://media.istockphoto.com/id/966286000/pt/foto/3d-render-dinosaur.jpg?s=2048x2048&w=is&k=20&c=sMCoWMJR-gn4SpKEiQ4YK6nxT2AfwV9eEV32pkPZduc=" alt="Banner com Dinossauros" class="banner-img">
-</seção>
 
 <!-- Conteúdo Principal -->
 <classe principal="conteúdo-principal">
