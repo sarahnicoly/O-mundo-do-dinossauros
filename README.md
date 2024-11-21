@@ -5,7 +5,7 @@
 <meta name="viewport" content="largura=largura-do-dispositivo, escala-inicial=1.0">
 <title>O Mundo dos Dinossauros</title>
 <link rel="folha de estilo" href="estilos.css">
-</cabeçalho>
+
 <corpo>
 <!-- Cabeçalho -->
 <cabeçalho classe="cabeçalho">
@@ -32,13 +32,15 @@ Sua extinção, há cerca de 66 milhões de anos, foi causada por um impacto de 
 <li>Velociraptor</li>
 <li>Diplodoco</li>
 </ul>
-</principal>
 
 <!-- Rodapé -->
 
 <p>Fonte das informações: https://pt.wikipedia.org/wiki/Dinossauro Wikipedia</a></p>
 <p>Contato: sarah.aciole@gmail.com </p>
 <p>© 2024 - O Mundo dos Dinossauros</p>
+
 </rodapé>
+
 </corpo>
+
 </html>
