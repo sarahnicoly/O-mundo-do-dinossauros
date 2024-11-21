@@ -32,15 +32,10 @@ Sua extinção, há cerca de 66 milhões de anos, foi causada por um impacto de 
 <li>Velociraptor</li>
 <li>Diplodoco</li>
 </ul>
-
 <!-- Rodapé -->
-
 <p>Fonte das informações: https://pt.wikipedia.org/wiki/Dinossauro Wikipedia</a></p>
 <p>Contato: sarah.aciole@gmail.com </p>
 <p>© 2024 - O Mundo dos Dinossauros</p>
-
 </rodapé>
-
 </corpo>
-
 </html>
