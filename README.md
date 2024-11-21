@@ -9,13 +9,13 @@
 <corpo>
 <!-- Cabeçalho -->
 <cabeçalho classe="cabeçalho">
-<img src="logo.png" alt="Logo Dinossauros" class="logo">
+<img src="file:///D:/Meus%20Documentos/Pictures/o%20mundo%20dos%20dinossauros.webp" alt="Logo Dinossauros" class="logo">
 <h1 class="page-title">O Mundo dos Dinossauros</h1>
 </cabeçalho>
 
 <!-- Faixa -->
 <seção class="banner">
-<img src="banner-dinossauros.jpg" alt="Banner com Dinossauros" class="banner-img">
+<img src="https://media.istockphoto.com/id/966286000/pt/foto/3d-render-dinosaur.jpg?s=2048x2048&w=is&k=20&c=sMCoWMJR-gn4SpKEiQ4YK6nxT2AfwV9eEV32pkPZduc=" alt="Banner com Dinossauros" class="banner-img">
 </seção>
 
 <!-- Conteúdo Principal -->
