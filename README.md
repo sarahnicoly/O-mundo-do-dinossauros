@@ -1,4 +1,3 @@
-# O-mundo-do-dinossauros
 <!DOCTYPE html>
 <html lang="pt-BR">
 <cabeça>
@@ -38,7 +37,7 @@ Sua extinção, há cerca de 66 milhões de anos, foi causada por um impacto de 
 </principal>
 
 <!-- Rodapé -->
-<rodapé classe="rodapé">
+
 <p>Fonte das informações: https://pt.wikipedia.org/wiki/Dinossauro Wikipedia</a></p>
 <p>Contato: sarah.aciole@email.com </p>
 <p>© 2024 - O Mundo dos Dinossauros</p>
