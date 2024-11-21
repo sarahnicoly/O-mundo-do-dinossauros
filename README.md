@@ -47,6 +47,8 @@ Sua extinção, há cerca de 66 milhões de anos, foi causada por um impacto de 
 </p>
 <img src="https://www.istockphoto.com/br/foto/dinossauro-braquiossauro-na-natureza-gm1872381255-553134964" alt="Banner" class="banner-img">
 </p>
+<li>entre outros</li>
+</p>
 </ul>
 <!-- Rodapé -->
 <p>Fonte das informações: https://pt.wikipedia.org/wiki/Dinossauro Wikipedia</a></p>
