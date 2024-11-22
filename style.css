@@ -1,1 +1,79 @@
-
+/* Definições Globais */
+corpo {
+    margem: 0;
+    família de fontes: Arial, sem serifa;
+    altura da linha: 1,6;
+    cor de fundo: #f6f6f6;
+    cor: #333;
+    }
+    
+    /* Cabeçalho */
+    .cabeçalho {
+    cor de fundo: #3C6E71;
+    cor: #FFFFFF;
+    alinhamento de texto: centralizar;
+    preenchimento: 20px 0;
+    }
+    
+    .logotipo {
+    largura máxima: 100px;
+    exibir: bloco;
+    margem: 0 automático;
+    }
+    
+    .título-da-página {
+    margem: 10px 0 0;
+    tamanho da fonte: 24px;
+    }
+    
+    /* Bandeira */
+    .bandeira {
+    exibição: flexível;
+    justificar-conteúdo: centro;
+    alinhar-itens: centro;
+    cor de fundo: #353535;
+    preenchimento: 20px 0;
+    }
+    
+    .banner-img {
+    largura máxima: 100%;
+    altura: automático;
+    raio da borda: 10px;
+    }
+    
+    /* Conteúdo Principal */
+    .conteúdo-principal {
+    preenchimento: 20px;
+    largura máxima: 800px;
+    margem: 0 automático;
+    cor de fundo: #FFFFFF;
+    raio da borda: 10px;
+    caixa-sombra: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .conteúdo-principal h2 {
+    cor: #3C6E71;
+    }
+    
+    .conteúdo-principal ul {
+    tipo-de-estilo-de-lista: quadrado;
+    preenchimento-esquerdo: 20px;
+    }
+    
+    /* Rodapé */
+    .rodapé {
+    cor de fundo: #2A2A2A;
+    cor: #FFFFFF;
+    alinhamento de texto: centralizar;
+    preenchimento: 10px 0;
+    tamanho da fonte: 14px;
+    }
+    
+    .rodapé a {
+    cor: #FFD166;
+    decoração de texto: nenhuma;
+    }
+    
+    .rodapé a:hover {
+    decoração de texto: sublinhado;
+    }
