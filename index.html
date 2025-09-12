@@ -8,30 +8,35 @@
 
 <body>
 
-    <!-- Modal de Login -->
     <div id="login-modal" class="login-modal-overlay">
         <div class="login-box">
             <span class="close-button" onclick="closeLoginModal()">&times;</span>
             <h2 class="text-3xl font-bold mb-6 text-center text-white">Login</h2>
-            <form>
-                <input type="text" placeholder="Nome de Usuário" class="login-input">
-                <input type="password" placeholder="Senha" class="login-input">
+            <form id="login-form">
+                <input id="user-name-input" type="text" placeholder="Nome" class="login-input" required>
+                <input type="email" placeholder="Email" class="login-input" required>
+                <input type="password" placeholder="Senha" class="login-input" required>
                 <button type="submit" class="w-full py-3 rounded-lg font-bold login-button">Entrar</button>
             </form>
         </div>
     </div>
 
-    <!-- Cabeçalho -->
-    <header class="page-header text-center py-5 rounded-b-lg shadow-lg">
-        <img src="https://placehold.co/100x100/3C6E71/FFFFFF?text=Dino" alt="Logo Dinossauros" class="mx-auto rounded-full">
-        <h1 class="text-4xl font-bold mt-2">O Mundo dos Dinossauros</h1>
-        <button class="login-button py-2 px-5 rounded-md font-semibold mt-4" onclick="showLoginModal()">Login</button>
+    <header class="page-header flex items-center justify-between px-6 py-3 rounded-b-lg shadow-lg">
+        <div class="flex items-center gap-4">
+            <img src="https://placehold.co/80x80/533483/FFFFFF?text=Dino" alt="Logo Dinossauros" class="rounded-full">
+            <h1 class="text-4xl font-bold">O Mundo dos Dinossauros</h1>
+        </div>
+        <div id="user-section">
+            <button id="login-button-header" class="login-button py-2 px-5 rounded-md font-semibold" onclick="showLoginModal()">Login</button>
+            <div id="user-profile" class="hidden items-center gap-3">
+                <img src="https://placehold.co/50x50/3ddc84/1f1f1f?text=User" alt="Imagem do Usuário" class="rounded-full">
+                <span id="user-name-display" class="font-semibold text-lg"></span>
+            </div>
+        </div>
     </header>
 
-    <!-- Banner e Carrossel -->
-    <div class="flex flex-col items-center py-5 bg-gray-900">
-        <img src="mun-dos-dino.jpg" alt="Banner com Dinossauros" class="max-w-full h-auto rounded-xl">
-        <p class="text-white text-center mt-4 mb-2">Clique na imagem para ir para a seção!</p>
+    <div class="banner-carousel-section flex flex-col items-center justify-center py-10">
+        <p class="text-white text-center text-xl font-semibold mb-4 bg-black bg-opacity-50 px-4 py-2 rounded-lg">Clique na imagem para ir para a seção!</p>
         <div class="carousel-container mt-4">
             <img src="tiranossauro rex.jpg" alt="Tiranossauro Rex" class="carousel-item" onclick="scrollToSection('tiranossauro-rex')">
             <img src="triceratops.jpg" alt="Triceratops" class="carousel-item" onclick="scrollToSection('triceratops')">
@@ -41,7 +46,6 @@
         </div>
     </div>
 
-    <!-- Conteúdo Principal -->
     <main class="main-content mx-auto my-5 p-5 rounded-xl shadow-xl max-w-4xl">
         <h2 class="text-3xl font-bold text-gray-200 mb-4">Sobre os Dinossauros</h2>
         <p class="mb-6 text-gray-400">
@@ -50,108 +54,90 @@
 
         <h3 class="text-2xl font-semibold text-gray-200 mb-4">Algumas espécies famosas:</h3>
         
-        <!-- Tiranossauro Rex -->
         <div id="tiranossauro-rex" class="mb-8 p-4 rounded-lg bg-gray-900">
             <img src="tiranossauro rex.jpg" alt="Imagem do Tiranossauro Rex" class="dino-image rounded-lg">
             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Tiranossauro Rex</h4>
             <p class="text-gray-400">
                 O Tiranossauro rex foi um dinossauro carnívoro que viveu no final do período Cretáceo, há aproximadamente 66 a 68 milhões de anos, na América do Norte. É conhecido por seu corpo grande, cabeça maciça com uma das mordidas mais poderosas, e braços diminutos. Pesquisadores o consideram o principal predador de seu ecossistema, com uma dieta que incluía tanto caça quanto carniça.
             </p>
-            <h5 class="text-lg font-bold mt-4 text-white">Características Físicas e Comportamentais:</h5>
-            <ul class="list-disc list-inside ml-4 text-gray-400">
-                <li>Tamanho e Peso: Media cerca de 12 metros de comprimento e podia pesar entre 5 a 8 toneladas.</li>
-                <li>Mordida: Possuía mandíbulas poderosas capazes de esmagar ossos e uma mordida com pressão de até 6 toneladas.</li>
-                <li>Braços Curtos: Os braços eram pequenos em comparação ao corpo, mas a sua utilidade é debatida.</li>
-                <li>Olfato e Visão: O T. rex tinha um olfato aguçado e uma visão superior à dos humanos.</li>
-                <li>Velocidade: Atingia uma velocidade máxima de cerca de 19 a 27 km/h.</li>
-            </ul>
         </div>
         
-        <!-- Triceratops -->
         <div id="triceratops" class="mb-8 p-4 rounded-lg bg-gray-900">
             <img src="triceratops.jpg" alt="Imagem do Triceratops" class="dino-image rounded-lg">
             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Triceratops</h4>
             <p class="text-gray-400">
                 O Triceratops foi um grande dinossauro herbívoro do final do período Cretáceo, conhecido por sua cabeça maciça com três chifres e uma grande gola óssea no pescoço.
             </p>
-            <h5 class="text-lg font-bold mt-4 text-white">Características Notáveis:</h5>
-            <ul class="list-disc list-inside ml-4 text-gray-400">
-                <li>Três chifres: Dois chifres longos e pontiagudos acima dos olhos e um chifre menor no focinho.</li>
-                <li>Gola óssea: Uma grande e óssea gola na parte traseira da cabeça.</li>
-                <li>Bico e dentes: Um bico forte e fileiras de até 800 dentes para triturar plantas.</li>
-            </ul>
         </div>
 
-        <!-- Estegossauro -->
         <div id="estegossauro" class="mb-8 p-4 rounded-lg bg-gray-900">
             <img src="estegossauro.jpg" alt="Imagem do Estegossauro" class="dino-image rounded-lg">
             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Estegossauro</h4>
             <p class="text-gray-400">
                 O estegossauro foi um grande dinossauro herbívoro do período Jurássico Superior, conhecido pelas suas placas verticais nas costas e espinhos na cauda.
             </p>
-            <h5 class="text-lg font-bold mt-4 text-white">Características:</h5>
-            <ul class="list-disc list-inside ml-4 text-gray-400">
-                <li>Placas e espinhos: Placas ósseas verticais ao longo do dorso e espinhos na cauda.</li>
-                <li>Boca: Tinha um bico sem dentes, ideal para se alimentar de vegetação baixa.</li>
-                <li>Pequena cabeça: Apesar do tamanho do corpo, a sua cabeça e cérebro eram muito pequenos.</li>
-            </ul>
         </div>
 
-        <!-- Velociraptor -->
         <div id="velociraptor" class="mb-8 p-4 rounded-lg bg-gray-900">
             <img src="velociraptor.jpg" alt="Imagem do Velociraptor" class="dino-image rounded-lg">
             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Velociraptor</h4>
             <p class="text-gray-400">
                 O Velociraptor era um predador ágil e carnívoro que viveu no final do período Cretáceo, famoso pela garra em forma de foice no segundo dedo de cada pé e pelo crânio longo e estreito.
             </p>
-            <h5 class="text-lg font-bold mt-4 text-white">Características Físicas:</h5>
-            <ul class="list-disc list-inside ml-4 text-gray-400">
-                <li>Tamanho: Era um dinossauro pequeno e leve, medindo cerca de 1,8 metro de comprimento.</li>
-                <li>Penas: Tinha penas, não apenas para a plumagem, mas também para manter o calor corporal.</li>
-                <li>Garra Mortal: A característica mais distintiva era uma grande garra retrátil em forma de foice no segundo dedo do pé.</li>
-            </ul>
         </div>
 
-        <!-- Diplodoco -->
         <div id="diplodoco" class="mb-8 p-4 rounded-lg bg-gray-900">
             <img src="diplodoco.jpg" alt="Imagem do Diplodoco" class="dino-image rounded-lg">
             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Diplodoco</h4>
             <p class="text-gray-400">
                 O Diplodoco foi um grande dinossauro herbívoro do período Jurássico Superior, conhecido pelo seu corpo muito longo (até 27 metros), pescoço e cauda gigantescos.
             </p>
-            <h5 class="text-lg font-bold mt-4 text-white">Características Físicas:</h5>
-            <ul class="list-disc list-inside ml-4 text-gray-400">
-                <li>Tamanho e Forma: Podia atingir cerca de 27 metros de comprimento, com um pescoço longo e uma cauda muito longa e fina.</li>
-                <li>Cabeça Pequena: Possuía uma cabeça pequena, com dentes em forma de pino na frente da boca.</li>
-                <li>Estrutura Óssea: A estrutura oca das vértebras o ajudava a ser mais leve.</li>
-            </ul>
         </div>
     </main>
     
-    <!-- Rodapé -->
     <footer class="bg-gray-900 text-white text-center py-3 rounded-t-lg shadow-inner mt-5">
         <p class="text-sm">Contato: sarah2008ti@gmail.com</p>
         <p class="text-sm mt-1">© 2024 - O Mundo dos Dinossauros</p>
     </footer>
 
     <script>
-        // Função para mostrar o modal de login
+        // Funções do Modal
         function showLoginModal() {
             document.getElementById('login-modal').style.display = 'flex';
         }
 
-        // Função para fechar o modal de login
         function closeLoginModal() {
             document.getElementById('login-modal').style.display = 'none';
         }
 
-        // Função para rolar até a seção correta
+        // Função de rolagem
         function scrollToSection(id) {
             const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        // Simulação de Login
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+
+            // Pega o nome do usuário do input
+            const userName = document.getElementById('user-name-input').value;
+
+            // Esconde o botão de login
+            document.getElementById('login-button-header').classList.add('hidden');
+
+            // Mostra o perfil do usuário e atualiza o nome
+            const userProfile = document.getElementById('user-profile');
+            document.getElementById('user-name-display').textContent = userName;
+            userProfile.classList.remove('hidden');
+            userProfile.classList.add('flex'); // Usa flex para alinhar a imagem e o nome
+
+            // Fecha o modal
+            closeLoginModal();
+        });
     </script>
 </body>
+
 </html>

@@ -1,117 +1,134 @@
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-        /* Paleta de Cores Pôr do Sol (Modo Escuro) */
-        :root {
-            --bg-principal: #1f1f1f;
-            --bg-secundario: #2a2a2a;
-            --texto-claro: #f0f0f0;
-            --cor-acento-claro: #ffc470;
-            --cor-acento-escuro: #e94e77;
-        }
+/* Paleta de Cores (Azul, Verde, Roxo) */
+:root {
+    --bg-principal: #100f1c;      /* Roxo bem escuro */
+    --bg-secundario: #1b1a2ea9;  /* Roxo/Azul escuro */
+    --texto-claro: #f0f0f0;
+    --cor-acento-claro: #3ddc84;  /* Verde vibrante */
+    --cor-acento-escuro: #533483; /* Roxo */
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-principal);
-            color: var(--texto-claro);
-            line-height: 1.6;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
 
-        /* Estilos personalizados */
-        .page-header {
-            background-color: var(--bg-secundario);
-            color: var(--texto-claro);
-        }
+/* Estilos personalizados */
+.page-header {
+    background-color: var(--bg-secundario);
+    border-bottom: 2px solid var(--cor-acento-escuro);
+    color: var(--texto-claro);
+}
 
-        .main-content {
-            background-color: var(--bg-secundario);
-        }
+.main-content {
+    background-color: var(--bg-secundario);
+}
 
-        /* Imagens com borda vermelha e tamanho original */
-        .dino-image {
-            border: 4px solid var(--cor-acento-escuro);
-            display: block;
-            margin: 0 auto;
-        }
+/* Imagens com borda */
+.dino-image {
+    border: 4px solid var(--cor-acento-escuro);
+    display: block;
+    margin: 0 auto;
+}
 
-        .login-button {
-            background-color: var(--cor-acento-claro);
-            color: var(--bg-principal);
-            transition: background-color 0.3s;
-        }
-        
-        .login-button:hover {
-            background-color: #ffd88a;
-        }
+/* Botão de Login */
+.login-button {
+    background-color: var(--cor-acento-claro);
+    color: var(--bg-principal);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
 
-        /* Estilo do carrossel */
-        .carousel-container {
-            display: flex;
-            overflow-x: auto;
-            gap: 16px;
-            padding: 8px;
-            scroll-behavior: smooth;
-        }
+.login-button:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px var(--cor-acento-claro);
+}
 
-        .carousel-item {
-            cursor: pointer;
-            border: 2px solid transparent;
-            border-radius: 8px;
-            transition: border-color 0.3s;
-            flex-shrink: 0;
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
-        }
+/* Seção do Banner com Carrossel */
+.banner-carousel-section {
+    background-image: linear-gradient(rgba(16, 15, 28, 0.7), rgba(16, 15, 28, 0.7)), url('mun-dos-dino.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito parallax */
+    min-height: 350px; /* Garante uma altura mínima para o banner */
+    border-radius: 12px;
+    margin: 20px;
+}
 
-        .carousel-item:hover {
-            border-color: var(--cor-acento-escuro);
-        }
+/* Estilo do carrossel */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 16px;
+    scroll-behavior: smooth;
+    max-width: 90%;
+}
 
-        /* Modal de Login */
-        .login-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+.carousel-item {
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
 
-        .login-box {
-            background: rgba(42, 42, 42, 0.9);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 90%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
+.carousel-item:hover {
+    border-color: var(--cor-acento-claro);
+    transform: scale(1.05);
+}
 
-        .login-input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            background: var(--bg-principal);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            color: var(--texto-claro);
-        }
-        .login-input:focus {
-            outline: none;
-            border-color: var(--cor-acento-claro);
-        }
+/* Modal de Login */
+.login-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            color: var(--texto-claro);
-            cursor: pointer;
-        }
+.login-box {
+    background: var(--bg-secundario);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    border: 1px solid var(--cor-acento-escuro);
+    position: relative;
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: var(--bg-principal);
+    border: 1px solid var(--cor-acento-escuro);
+    border-radius: 8px;
+    color: var(--texto-claro);
+}
+.login-input:focus {
+    outline: none;
+    border-color: var(--cor-acento-claro);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: var(--texto-claro);
+    cursor: pointer;
+}
