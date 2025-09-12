@@ -2,11 +2,12 @@
 
 /* Paleta de Cores (Azul, Verde, Roxo) */
 :root {
-    --bg-principal: #100f1c;      /* Roxo bem escuro */
-    --bg-secundario: #1b1a2ea9;  /* Roxo/Azul escuro */
+    --bg-principal: #100f1c;
+    --bg-secundario: #1b1a2ea9;
     --texto-claro: #f0f0f0;
-    --cor-acento-claro: #3ddc84;  /* Verde vibrante */
-    --cor-acento-escuro: #533483; /* Roxo */
+    --cor-acento-claro: #3ddc84;
+    --cor-acento-escuro: #533483;
+    --cor-erro: #ff5555;
 }
 
 body {
@@ -27,14 +28,12 @@ body {
     background-color: var(--bg-secundario);
 }
 
-/* Imagens com borda */
 .dino-image {
     border: 4px solid var(--cor-acento-escuro);
     display: block;
     margin: 0 auto;
 }
 
-/* Botão de Login */
 .login-button {
     background-color: var(--cor-acento-claro);
     color: var(--bg-principal);
@@ -52,8 +51,8 @@ body {
     background-image: linear-gradient(rgba(16, 15, 28, 0.7), rgba(16, 15, 28, 0.7)), url('mun-dos-dino.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efeito parallax */
-    min-height: 350px; /* Garante uma altura mínima para o banner */
+    background-attachment: fixed;
+    min-height: 350px;
     border-radius: 12px;
     margin: 20px;
 }
@@ -131,4 +130,32 @@ body {
     font-size: 24px;
     color: var(--texto-claro);
     cursor: pointer;
+}
+
+/* NOVO: Estilo para mensagem de erro */
+.error-message {
+    color: var(--cor-erro);
+    background-color: #ff555520;
+    border: 1px solid var(--cor-erro);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* NOVO: Estilo para links opcionais no modal */
+.optional-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--cor-acento-claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.optional-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
 }

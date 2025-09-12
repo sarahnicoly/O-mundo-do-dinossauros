@@ -11,13 +11,29 @@
     <div id="login-modal" class="login-modal-overlay">
         <div class="login-box">
             <span class="close-button" onclick="closeLoginModal()">&times;</span>
-            <h2 class="text-3xl font-bold mb-6 text-center text-white">Login</h2>
-            <form id="login-form">
-                <input id="user-name-input" type="text" placeholder="Nome" class="login-input" required>
-                <input type="email" placeholder="Email" class="login-input" required>
-                <input type="password" placeholder="Senha" class="login-input" required>
-                <button type="submit" class="w-full py-3 rounded-lg font-bold login-button">Entrar</button>
-            </form>
+            
+            <div id="login-form-container">
+                <h2 class="text-3xl font-bold mb-6 text-center text-white">Login</h2>
+                <form id="login-form">
+                    <input id="user-name-input" type="text" placeholder="Nome" class="login-input" required>
+                    <input id="user-email-input" type="email" placeholder="Email" class="login-input" required>
+                    <input id="user-password-input" type="password" placeholder="Senha" class="login-input" required>
+                    <div id="login-error-message" class="error-message hidden"></div>
+                    <button type="submit" class="w-full py-3 rounded-lg font-bold login-button">Entrar</button>
+                </form>
+                <a href="#" id="forgot-password-link" class="optional-link">Esqueci a senha?</a>
+            </div>
+
+            <div id="reset-password-container" class="hidden">
+                 <h2 class="text-3xl font-bold mb-6 text-center text-white">Redefinir Senha</h2>
+                 <form id="reset-password-form">
+                    <p class="text-center text-gray-400 mb-4">Digite seu email para enviarmos um link de redefinição.</p>
+                    <input type="email" placeholder="Email" class="login-input" required>
+                    <button type="submit" class="w-full py-3 rounded-lg font-bold login-button">Enviar Link</button>
+                 </form>
+                 <a href="#" id="back-to-login-link" class="optional-link">Voltar ao Login</a>
+            </div>
+
         </div>
     </div>
 
@@ -49,49 +65,33 @@
     <main class="main-content mx-auto my-5 p-5 rounded-xl shadow-xl max-w-4xl">
         <h2 class="text-3xl font-bold text-gray-200 mb-4">Sobre os Dinossauros</h2>
         <p class="mb-6 text-gray-400">
-            Os dinossauros foram animais que dominaram a Terra por milhões de anos. Eles variavam em tamanho, comportamento e hábitos alimentares, com espécies famosas como o Tiranossauro Rex, o Velociraptor e o Braquiossauro. Sua extinção, há cerca de 66 milhões de anos, foi causada por um impacto de asteroide e mudanças climáticas severas.
+            Os dinossauros foram animais que dominaram a Terra por milhões de anos.
         </p>
-
         <h3 class="text-2xl font-semibold text-gray-200 mb-4">Algumas espécies famosas:</h3>
-        
         <div id="tiranossauro-rex" class="mb-8 p-4 rounded-lg bg-gray-900">
-            <img src="tiranossauro rex.jpg" alt="Imagem do Tiranossauro Rex" class="dino-image rounded-lg">
-            <h4 class="text-xl font-bold mt-4 mb-2 text-white">Tiranossauro Rex</h4>
-            <p class="text-gray-400">
-                O Tiranossauro rex foi um dinossauro carnívoro que viveu no final do período Cretáceo, há aproximadamente 66 a 68 milhões de anos, na América do Norte. É conhecido por seu corpo grande, cabeça maciça com uma das mordidas mais poderosas, e braços diminutos. Pesquisadores o consideram o principal predador de seu ecossistema, com uma dieta que incluía tanto caça quanto carniça.
-            </p>
+             <img src="tiranossauro rex.jpg" alt="Imagem do Tiranossauro Rex" class="dino-image rounded-lg">
+             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Tiranossauro Rex</h4>
+             <p class="text-gray-400">O Tiranossauro rex foi um dinossauro carnívoro que viveu no final do período Cretáceo...</p>
         </div>
-        
         <div id="triceratops" class="mb-8 p-4 rounded-lg bg-gray-900">
-            <img src="triceratops.jpg" alt="Imagem do Triceratops" class="dino-image rounded-lg">
-            <h4 class="text-xl font-bold mt-4 mb-2 text-white">Triceratops</h4>
-            <p class="text-gray-400">
-                O Triceratops foi um grande dinossauro herbívoro do final do período Cretáceo, conhecido por sua cabeça maciça com três chifres e uma grande gola óssea no pescoço.
-            </p>
+             <img src="triceratops.jpg" alt="Imagem do Triceratops" class="dino-image rounded-lg">
+             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Triceratops</h4>
+             <p class="text-gray-400">O Triceratops foi um grande dinossauro herbívoro do final do período Cretáceo...</p>
         </div>
-
         <div id="estegossauro" class="mb-8 p-4 rounded-lg bg-gray-900">
-            <img src="estegossauro.jpg" alt="Imagem do Estegossauro" class="dino-image rounded-lg">
-            <h4 class="text-xl font-bold mt-4 mb-2 text-white">Estegossauro</h4>
-            <p class="text-gray-400">
-                O estegossauro foi um grande dinossauro herbívoro do período Jurássico Superior, conhecido pelas suas placas verticais nas costas e espinhos na cauda.
-            </p>
+             <img src="estegossauro.jpg" alt="Imagem do Estegossauro" class="dino-image rounded-lg">
+             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Estegossauro</h4>
+             <p class="text-gray-400">O estegossauro foi um grande dinossauro herbívoro do período Jurássico Superior...</p>
         </div>
-
         <div id="velociraptor" class="mb-8 p-4 rounded-lg bg-gray-900">
-            <img src="velociraptor.jpg" alt="Imagem do Velociraptor" class="dino-image rounded-lg">
-            <h4 class="text-xl font-bold mt-4 mb-2 text-white">Velociraptor</h4>
-            <p class="text-gray-400">
-                O Velociraptor era um predador ágil e carnívoro que viveu no final do período Cretáceo, famoso pela garra em forma de foice no segundo dedo de cada pé e pelo crânio longo e estreito.
-            </p>
+             <img src="velociraptor.jpg" alt="Imagem do Velociraptor" class="dino-image rounded-lg">
+             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Velociraptor</h4>
+             <p class="text-gray-400">O Velociraptor era um predador ágil e carnívoro que viveu no final do período Cretáceo...</p>
         </div>
-
         <div id="diplodoco" class="mb-8 p-4 rounded-lg bg-gray-900">
-            <img src="diplodoco.jpg" alt="Imagem do Diplodoco" class="dino-image rounded-lg">
-            <h4 class="text-xl font-bold mt-4 mb-2 text-white">Diplodoco</h4>
-            <p class="text-gray-400">
-                O Diplodoco foi um grande dinossauro herbívoro do período Jurássico Superior, conhecido pelo seu corpo muito longo (até 27 metros), pescoço e cauda gigantescos.
-            </p>
+             <img src="diplodoco.jpg" alt="Imagem do Diplodoco" class="dino-image rounded-lg">
+             <h4 class="text-xl font-bold mt-4 mb-2 text-white">Diplodoco</h4>
+             <p class="text-gray-400">O Diplodoco foi um grande dinossauro herbívoro do período Jurássico Superior...</p>
         </div>
     </main>
     
@@ -101,16 +101,33 @@
     </footer>
 
     <script>
-        // Funções do Modal
+        // --- ELEMENTOS DO DOM ---
+        const loginModal = document.getElementById('login-modal');
+        const loginFormContainer = document.getElementById('login-form-container');
+        const resetPasswordContainer = document.getElementById('reset-password-container');
+        const loginForm = document.getElementById('login-form');
+        const resetPasswordForm = document.getElementById('reset-password-form');
+        const loginErrorMessage = document.getElementById('login-error-message');
+        
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+        const backToLoginLink = document.getElementById('back-to-login-link');
+
+        const emailInput = document.getElementById('user-email-input');
+        const passwordInput = document.getElementById('user-password-input');
+
+        // --- FUNÇÕES DO MODAL E NAVEGAÇÃO ---
         function showLoginModal() {
-            document.getElementById('login-modal').style.display = 'flex';
+            loginModal.style.display = 'flex';
+            // Garante que o form de login seja sempre o primeiro a ser mostrado
+            loginFormContainer.classList.remove('hidden');
+            resetPasswordContainer.classList.add('hidden');
+            loginErrorMessage.classList.add('hidden'); // Esconde erros antigos
         }
 
         function closeLoginModal() {
-            document.getElementById('login-modal').style.display = 'none';
+            loginModal.style.display = 'none';
         }
 
-        // Função de rolagem
         function scrollToSection(id) {
             const element = document.getElementById(id);
             if (element) {
@@ -118,25 +135,66 @@
             }
         }
 
-        // Simulação de Login
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio real do formulário
+        // --- LÓGICA DE LOGIN E REDEFINIÇÃO DE SENHA ---
 
-            // Pega o nome do usuário do input
+        // Troca para a tela de "Esqueci a senha"
+        forgotPasswordLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginFormContainer.classList.add('hidden');
+            resetPasswordContainer.classList.remove('hidden');
+        });
+        
+        // Volta para a tela de login
+        backToLoginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            resetPasswordContainer.classList.add('hidden');
+            loginFormContainer.classList.remove('hidden');
+        });
+
+        // Simulação de Login
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // --- DADOS SIMULADOS DE UM USUÁRIO CORRETO ---
+            const correctEmail = 'sarah2008ti@gmail.com';
+            const correctPassword = '12345';
+            
+            const enteredEmail = emailInput.value;
+            const enteredPassword = passwordInput.value;
             const userName = document.getElementById('user-name-input').value;
 
-            // Esconde o botão de login
-            document.getElementById('login-button-header').classList.add('hidden');
+            // Validação: verifica se os dados batem com o usuário simulado
+            if (enteredEmail === correctEmail && enteredPassword === correctPassword) {
+                // Se o login for bem-sucedido
+                document.getElementById('login-button-header').classList.add('hidden');
+                
+                const userProfile = document.getElementById('user-profile');
+                document.getElementById('user-name-display').textContent = userName;
+                userProfile.classList.remove('hidden');
+                userProfile.classList.add('flex');
 
-            // Mostra o perfil do usuário e atualiza o nome
-            const userProfile = document.getElementById('user-profile');
-            document.getElementById('user-name-display').textContent = userName;
-            userProfile.classList.remove('hidden');
-            userProfile.classList.add('flex'); // Usa flex para alinhar a imagem e o nome
-
-            // Fecha o modal
-            closeLoginModal();
+                closeLoginModal();
+                loginForm.reset(); // Limpa o formulário
+                loginErrorMessage.classList.add('hidden');
+            } else {
+                // Se o login falhar
+                loginErrorMessage.textContent = 'Senha ou email incorretos.';
+                loginErrorMessage.classList.remove('hidden');
+            }
         });
+
+        // Simulação de envio de link para redefinir senha
+        resetPasswordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Se este email estiver cadastrado, um link de redefinição foi enviado para você.');
+            // Volta para a tela de login após a mensagem
+            backToLoginLink.click();
+            resetPasswordForm.reset();
+        });
+
+        // Esconde a mensagem de erro quando o usuário começa a digitar novamente
+        emailInput.addEventListener('input', () => loginErrorMessage.classList.add('hidden'));
+        passwordInput.addEventListener('input', () => loginErrorMessage.classList.add('hidden'));
     </script>
 </body>
 
